@@ -8,16 +8,11 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    background-color: black;
-}
-
 .container {
     display: grid;
-    
     height: 100vh;
-    grid-template-areas: "header" "slider" "menu" "footer";
-    grid-template-rows: 1fr 2fr 3fr 15rem;
+    grid-template-areas: "header" "slider" "nav" "menu" "footer";
+    grid-template-rows: 1fr 2fr auto 3fr 15rem;
     grid-template-columns: 1fr 2fr 1fr;
     color: white;
 
@@ -31,33 +26,82 @@ a:link  {
 .header {
     grid-area: header;
     width: 100%;
-    padding: 1rem;
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     min-width: 32rem;
     text-align: center;
     font-size: 1.7rem;
 }
 
+.title {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0rem 1rem 1rem;
+    background: black;
+}
+
 .header .title__logo h1{
-    border: solid 1px white;
+    border: solid 2px #1c7929;
     padding: 3px;
     font-size: 25px;
-    border-radius: 5px;
+    border-radius: 7px;
+    background-color: black
 }
 
 
-.header .title__social  {
+.opc {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    background-color: #1c7929;
 }
-.header .title__social a {
+
+.opc a {
+    color: black;
+}
+
+.opc .search {
+    border: 1px solid black;
+    padding: 2px;
+    border-radius: 10px;
     background-color: white;
-    margin: 0.5rem;
+}
+
+label {
+    margin-left: 5px;
+}
+
+input {
+    border: none;
+}
+
+/*-----------------------NAV-----------------------------------------*/
+
+
+.nav {
+    grid-area: nav;
+    background-color: red;
     
+}
+
+.nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav ul li {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+    height: 40px;
+    width: 40px;
+    background-color: green;
+    border-radius: 22px;
+}
+
+.nav ul li a {
+    color: black;
 }
 
 /*-----------------------SLIDER---------------------------*/
